@@ -1,5 +1,5 @@
-import {Sidebar} from "widgets/Sidebar/Sidebar/Sidebar";
+import { Sidebar } from 'widgets/Sidebar/Sidebar/Sidebar';
 
 export {
-  Sidebar
-}
+  Sidebar,
+};
