@@ -15,7 +15,7 @@ const Navbar = ({ className }: NavbarProps) => (
         to="/"
         className={cls.mainLink}
       >
-        Главная
+        Главная страница
       </AppLink>
       <AppLink
         theme={AppLinkTheme.RED}
