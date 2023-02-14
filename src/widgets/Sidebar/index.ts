@@ -1,4 +1,4 @@
-import { Sidebar } from 'widgets/Sidebar/Sidebar/Sidebar';
+import { Sidebar } from 'widgets/Sidebar/ui/Sidebar/Sidebar';
 
 export {
   Sidebar,
