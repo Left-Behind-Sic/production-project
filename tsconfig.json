@@ -41,7 +41,8 @@
   },
   "include": [
     "./config/jest/setupTests.ts",
-    "src"
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
   ],
   "exclude": ["node_modules"]
 }
