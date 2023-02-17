@@ -1,4 +1,3 @@
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack';
 import { BuildOptions } from './types/config';
 import { buildCssLoader } from './loaders/buildCssLoader';
@@ -16,11 +15,13 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
       options: {
         presets: ['@babel/preset-env'],
         plugins: [
-          ['i18next-extract',
+          [
+            'i18next-extract',
             {
               locales: ['ru', 'en'],
               keyAsDefaultValue: true,
-            }],
+            },
+          ],
         ],
       },
     },
@@ -43,12 +44,5 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     exclude: /node_modules/,
   };
 
-  return [
-    fileLoader,
-    svgLoader,
-    babelLoader,
-    typescriptLoader,
-    cssLoader,
-
-  ];
+  return [fileLoader, svgLoader, babelLoader, typescriptLoader, cssLoader];
 }
