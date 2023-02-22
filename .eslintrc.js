@@ -56,6 +56,7 @@ module.exports = {
         code: 100,
       },
     ],
+    'no-param-reassign': 'off',
     'react-hooks/rules-of-hooks': 'error', // Проверяем правила хуков
     'react-hooks/exhaustive-deps': 'error', // Проверяем зависимости эффекта
   },
