@@ -1,4 +1,6 @@
 {
+  "('decrement')": "('decrement')",
+  "('increment')": "('increment')",
   "decrement": "decrement",
   "increment": "increment",
   "throw error": "throw error",
@@ -11,7 +13,5 @@
   "Переключить": "Переключить",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
   "Страница не найдена": "Страница не найдена",
-  "Язык": "Язык",
-  "('increment')": "('increment')",
-  "('decrement')": "('decrement')"
+  "Язык": "Язык"
 }
