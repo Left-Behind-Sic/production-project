@@ -12,6 +12,9 @@
   "О сайте": "О сайте",
   "Переключить": "Переключить",
   "Короткий язык": "Ru",
-  "('increment')": "('increment')",
-  "('decrement')": "('decrement')"
+  "increment": "increment",
+  "decrement": "decrement",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль",
+  "Введите текст": "Введите текст"
 }
