@@ -1,15 +1,13 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import React, {
-  InputHTMLAttributes, memo, useEffect, useRef, useState,
-} from 'react';
+import React, { InputHTMLAttributes, memo, useEffect, useRef, useState } from 'react';
 import cls from './Input.module.scss';
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>;
 
-interface InputProps extends HTMLInputProps{
-  className?: string
+interface InputProps extends HTMLInputProps {
+  className?: string;
   value?: string;
-  onChange?: (value: string) => void
+  onChange?: (value: string) => void;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -54,11 +52,7 @@ export const Input = memo((props: InputProps) => {
 
   return (
     <div className={classNames(cls.InputWrapper, {}, [className])}>
-      {placeholder ? (
-        <div className={cls.placeholder}>
-          {`${placeholder}>`}
-        </div>
-      ) : null}
+      {placeholder ? <div className={cls.placeholder}>{`${placeholder}>`}</div> : null}
       <div className={cls.caretWrapper}>
         <input
           ref={ref}

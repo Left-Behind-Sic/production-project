@@ -4,7 +4,12 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+    'plugin:i18next/recommended',
+    'plugin:prettier/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -13,12 +18,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'i18next',
-    'react-hooks',
-  ],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'prettier'],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
@@ -47,13 +47,6 @@ module.exports = {
       {
         markupOnly: true,
         ignoreAttribute: ['data-testid'],
-      },
-    ],
-    'max-len': [
-      'error',
-      {
-        ignoreComments: true,
-        code: 100,
       },
     ],
     'no-param-reassign': 'off',

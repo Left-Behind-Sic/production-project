@@ -11,7 +11,7 @@ import MainIcon from 'shared/assets/icons/main-20-20.svg';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
-  className?: string
+  className?: string;
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
@@ -23,11 +23,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
   return (
     <div
-      data-testid="sidebar"
+      data-testid='sidebar'
       className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
     >
       <Button
-        data-testid="sidebar-toggle"
+        data-testid='sidebar-toggle'
         onClick={onToggle}
         className={cls.collapseBtn}
         theme={ButtonTheme.BACKGROUND_INVERTED}
@@ -38,35 +38,32 @@ export const Sidebar = ({ className }: SidebarProps) => {
       </Button>
       <div className={cls.items}>
         <div className={cls.item}>
-
           <AppLink
             theme={AppLinkTheme.SECONDARY}
             to={RoutePath.main}
             className={cls.item}
           >
             <MainIcon className={cls.icon} />
-            <span className={cls.link}>
-              {t('Главная страница')}
-            </span>
+            <span className={cls.link}>{t('Главная страница')}</span>
           </AppLink>
         </div>
         <div className={cls.item}>
-
           <AppLink
             theme={AppLinkTheme.SECONDARY}
             to={RoutePath.about}
             className={cls.item}
           >
             <AboutIcon className={cls.icon} />
-            <span className={cls.link}>
-              {t('О сайте')}
-            </span>
+            <span className={cls.link}>{t('О сайте')}</span>
           </AppLink>
         </div>
       </div>
       <div className={cls.switchers}>
         <ThemeSwitcher />
-        <LangSwitcher className={cls.lang} short={collapsed} />
+        <LangSwitcher
+          className={cls.lang}
+          short={collapsed}
+        />
       </div>
     </div>
   );
