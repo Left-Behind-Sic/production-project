@@ -16,5 +16,4 @@ export const Primary = Template.bind({});
 Primary.args = {
   placeholder: 'Text',
   value: '1234321',
-
 };

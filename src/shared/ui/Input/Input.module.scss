@@ -7,12 +7,14 @@
 }
 
 .input {
+  width: 100%;
+
+  color: transparent;
+  text-shadow: 0 0 0 var(--primary-color);
+
   background: transparent;
   border: none;
   outline: none;
-  width: 100%;
-  color: transparent;
-  text-shadow: 0 0 0 var(--primary-color);
 
   &:focus {
     outline: none;
@@ -20,17 +22,20 @@
 }
 
 .caretWrapper {
-  flex-grow: 1;
   position: relative;
+  flex-grow: 1;
 }
 
 .caret {
-  height: 3px;
-  width: 9px;
-  background: var(--primary-color);
+  position: absolute;
   bottom: 0;
   left: 0;
-  position: absolute;
+
+  width: 9px;
+  height: 3px;
+
+  background: var(--primary-color);
+
   animation: blink 0.7s forwards infinite;
 }
 

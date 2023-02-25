@@ -9,12 +9,16 @@
   "Обновить страницу": "Reload page",
   "throw error": "throw error",
   "Главная": "Main",
+  "Войти": "Login",
   "О сайте": "About us",
   "Переключить": "Toggle",
   "Короткий язык": "En",
   "increment": "increment",
   "decrement": "decrement",
-  "Введите username": "Введите username",
-  "Введите пароль": "Введите пароль",
-  "Введите текст": "Введите текст"
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password",
+  "Введите текст": "Enter text",
+  "Форма авторизации": "Authorization",
+  "Вы ввели неверный логин или пароль": "You entered an incorrect username or password",
+  "Выйти": "Logout"
 }
