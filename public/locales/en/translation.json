@@ -22,5 +22,7 @@
   "Вы ввели неверный логин или пароль": "You entered an incorrect username or password",
   "Выйти": "Logout",
   "Страница профиля": "Profile page",
-  "Профиль": "Profile"
+  "Профиль": "Profile",
+  "Укажите валюту": "Specify currency",
+  "Укажите страну": "Specify country"
 }
