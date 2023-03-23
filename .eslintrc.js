@@ -52,6 +52,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error', // Проверяем правила хуков
     'react-hooks/exhaustive-deps': 'error', // Проверяем зависимости эффекта
     'no-undef': 'off',
+    'react/no-array-index-key': 'off',
   },
   globals: {
     __IS_DEV__: true,
