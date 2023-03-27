@@ -9,6 +9,7 @@ describe('fetchNextArticlesPage.test', () => {
   test('success', async () => {
     const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
       articlesPage: {
+        _inited: true,
         view: ArticleView.BIG,
         page: 2,
         ids: [],
@@ -26,6 +27,7 @@ describe('fetchNextArticlesPage.test', () => {
   test('fetchArticleList not called', async () => {
     const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
       articlesPage: {
+        _inited: true,
         view: ArticleView.BIG,
         page: 2,
         ids: [],
@@ -44,6 +46,7 @@ describe('fetchNextArticlesPage.test', () => {
   test('fetchArticleList is loading', async () => {
     const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
       articlesPage: {
+        _inited: true,
         view: ArticleView.BIG,
         page: 2,
         ids: [],
