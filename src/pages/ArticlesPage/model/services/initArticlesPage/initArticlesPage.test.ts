@@ -1,5 +1,6 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
-import { ArticleView } from 'entities/Article';
+import { ArticleType, ArticleView } from 'entities/Article';
+import { ArticleSortField } from 'entities/Article/model/types/article';
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
 import { initArticlesPage } from './initArticlesPage';
 
@@ -17,9 +18,13 @@ describe('initArticlesPage.test', () => {
         limit: 5,
         isLoading: false,
         hasMore: true,
+        order: 'asc',
+        search: '',
+        sort: ArticleSortField.CREATED,
+        type: ArticleType.ALL,
       },
     });
-    await thunk.callThunk();
+    await thunk.callThunk(new URLSearchParams());
 
     // expect(thunk.dispatch).toBeCalledTimes(4);
     expect(fetchArticlesList).not.toHaveBeenCalled();
@@ -35,9 +40,13 @@ describe('initArticlesPage.test', () => {
         limit: 5,
         isLoading: false,
         hasMore: true,
+        order: 'asc',
+        search: '',
+        sort: ArticleSortField.CREATED,
+        type: ArticleType.ALL,
       },
     });
-    await thunk.callThunk();
+    await thunk.callThunk(new URLSearchParams());
 
     // expect(thunk.dispatch).toBeCalledTimes(4);
     expect(fetchArticlesList).toHaveBeenCalled();
