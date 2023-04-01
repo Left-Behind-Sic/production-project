@@ -36,7 +36,7 @@ export const CommentList = memo(({ className, comments, isLoading }: CommentList
           />
         ))
       ) : (
-        <Text text={t('Комментарии отсутсвуют')} />
+        <Text text={t('Комментарии отсутствуют')} />
       )}
     </div>
   );

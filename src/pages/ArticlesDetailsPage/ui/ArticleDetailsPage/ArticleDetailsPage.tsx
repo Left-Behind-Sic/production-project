@@ -16,6 +16,7 @@ import { AddCommentForm } from 'features/addCommentForm';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
+import { ArticlesDetailsPageHeader } from 'pages/ArticlesDetailsPage/ui/ArticlesDetailsPageHeader/ArticlesDetailsPageHeader';
 import { getArticleRecommendations } from '../../model/slices/articleDetailsRecommendationsSlice';
 import { getArticleRecommendationsIsLoading } from '../../model/selectors/recommendations';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
@@ -42,11 +43,6 @@ const ArticleDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
   const recommendations = useSelector(getArticleRecommendations.selectAll);
   const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
-
-  const onBackToList = useCallback(() => {
-    navigate(RoutePath.articles);
-  }, [navigate]);
 
   const onSendComment = useCallback(
     (text: string) => {
@@ -74,12 +70,7 @@ const ArticleDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
       removeAfterUnmount
     >
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        <Button
-          theme={ButtonTheme.OUTLINE}
-          onClick={onBackToList}
-        >
-          {t('Назад к списку')}
-        </Button>
+        <ArticlesDetailsPageHeader />
         <ArticleDetails id={id} />
         <Text
           size={TextSize.L}
