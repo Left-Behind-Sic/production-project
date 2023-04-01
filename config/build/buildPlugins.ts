@@ -30,6 +30,7 @@ export function buildPlugins({
       patterns: [{ from: paths.locales, to: paths.buildLocales }],
     }),
   ];
+
   if (isDev) {
     plugins.push(new ReactRefreshWebpackPlugin());
     plugins.push(new webpack.HotModuleReplacementPlugin());
