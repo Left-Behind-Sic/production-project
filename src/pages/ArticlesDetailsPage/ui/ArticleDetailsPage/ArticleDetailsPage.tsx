@@ -16,7 +16,7 @@ import { AddCommentForm } from 'features/addCommentForm';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
-import { ArticlesDetailsPageHeader } from 'pages/ArticlesDetailsPage/ui/ArticlesDetailsPageHeader/ArticlesDetailsPageHeader';
+import { ArticlesDetailsPageHeader } from '../ArticlesDetailsPageHeader/ArticlesDetailsPageHeader';
 import { getArticleRecommendations } from '../../model/slices/articleDetailsRecommendationsSlice';
 import { getArticleRecommendationsIsLoading } from '../../model/selectors/recommendations';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';

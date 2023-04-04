@@ -18,7 +18,14 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'prettier'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'prettier',
+    'eslint-super-plugin-path-checker',
+  ],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
@@ -53,6 +60,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error', // Проверяем зависимости эффекта
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
+    'eslint-super-plugin-path-checker/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,

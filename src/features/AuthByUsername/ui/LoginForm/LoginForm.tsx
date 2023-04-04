@@ -5,15 +5,15 @@ import { Input } from 'shared/ui/Input/Input';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { getLoginUsername } from 'features/AuthByUsername/model/selector/getLoginUsername/getLoginUsername';
-import { getLoginPassword } from 'features/AuthByUsername/model/selector/getLoginPassword/getLoginPassword';
-import { getLoginIsLoading } from 'features/AuthByUsername/model/selector/getLoginIsLoading/getLoginIsLoading';
-import { getLoginError } from 'features/AuthByUsername/model/selector/getLoginError/getLoginError';
 import {
   DynamicModuleLoader,
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { getLoginUsername } from '../../model/selector/getLoginUsername/getLoginUsername';
+import { getLoginPassword } from '../../model/selector/getLoginPassword/getLoginPassword';
+import { getLoginIsLoading } from '../../model/selector/getLoginIsLoading/getLoginIsLoading';
+import { getLoginError } from '../../model/selector/getLoginError/getLoginError';
 import cls from './LoginForm.module.scss';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
