@@ -52,7 +52,7 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid', 'target', 'justify', 'align', 'direction', 'gap'],
+        ignoreAttribute: ['data-testid', 'target', 'justify', 'align', 'direction', 'gap', 'role'],
       },
     ],
     'no-param-reassign': 'off',
