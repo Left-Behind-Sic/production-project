@@ -85,7 +85,10 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 
   if (isLoading) {
     content = (
-      <div>
+      <VStack
+        max
+        gap='16'
+      >
         <Skeleton
           className={cls.avatar}
           width={200}
@@ -112,7 +115,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
           width='100%'
           height={200}
         />
-      </div>
+      </VStack>
     );
   } else if (error) {
     content = (
@@ -178,6 +181,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
     >
       <VStack
         gap='16'
+        max
         className={classNames(cls.ArticleDetails, {}, [className])}
       >
         {content}
