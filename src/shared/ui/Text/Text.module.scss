@@ -14,7 +14,6 @@
 
   .text {
     color: var(--red-dark);
-
   }
 }
 
@@ -25,7 +24,6 @@
 
   .text {
     color: var(--inverted-secondary-color);
-
   }
 }
 
@@ -41,35 +39,32 @@
   text-align: center;
 }
 
-.size_s{
+.size_s {
   .title {
     font: var(--font-m);
   }
 
   .text {
     font: var(--font-s);
-
   }
 }
 
-.size_m{
+.size_m {
   .title {
     font: var(--font-l);
   }
 
   .text {
     font: var(--font-m);
-
   }
 }
 
-.size_l{
+.size_l {
   .title {
     font: var(--font-xl);
   }
 
   .text {
     font: var(--font-l);
-
   }
 }
