@@ -1,4 +1,4 @@
-export { UISchema, ScrollSchema } from './model/types/UISchema';
+export type { UISchema, ScrollSchema } from './model/types/UISchema';
 
 export { getUiScrollByPath } from './model/selectors/ui';
 
