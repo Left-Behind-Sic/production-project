@@ -29,7 +29,7 @@ export function buildBabelLoader(options: BuildBabelLoaderProps) {
             },
           ],
           '@babel/plugin-transform-runtime',
-          isTsx && [babelRemovePropsPlugin, { props: ['data-testid'] }],
+          isTsx && !isDev && [babelRemovePropsPlugin, { props: ['data-testid'] }],
           isDev && require.resolve('react-refresh/babel'),
         ].filter(Boolean),
       },
