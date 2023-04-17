@@ -30,7 +30,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
         title={t('Рекомендуем')}
       />
       <ArticleList
-        articles={articles}
+        articles={articles ?? []}
         // isLoading={recommendationsIsLoading}
         target='_blank'
       />
