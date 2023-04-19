@@ -1,8 +1,8 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Fragment, memo, ReactNode } from 'react';
 import { Menu } from '@headlessui/react';
-import { DropdownDirection } from 'shared/types/ui';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DropdownDirection } from '@/shared/types/ui';
 import AppLink from '../../../AppLink/AppLink';
 import cls from './Dropdown.module.scss';
 import { mapDirectionClass } from '../../styles/consts';

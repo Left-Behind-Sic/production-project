@@ -1,5 +1,3 @@
-export { Popover } from 'shared/ui/Popups/ui/Popover/Popover';
-
-export { ListBox } from 'shared/ui/Popups/ui/ListBox/ListBox';
-
-export { Dropdown } from 'shared/ui/Popups/ui/Dropdown/Dropdown';
+export { Popover } from './ui/Popover/Popover';
+export { ListBox } from './ui/ListBox/ListBox';
+export { Dropdown } from './ui/Dropdown/Dropdown';

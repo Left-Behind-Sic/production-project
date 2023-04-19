@@ -2,7 +2,7 @@ export {
   getArticleDetailsData,
   getArticleDetailsError,
   getArticleDetailsIsLoading,
-} from 'entities/Article/model/selectors/articleDetails';
+} from './model/selectors/articleDetails';
 
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
 

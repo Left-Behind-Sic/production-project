@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { ArticleList } from 'entities/Article';
 import { useSelector } from 'react-redux';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSearchParams } from 'react-router-dom';
+import { ArticleList } from '@/entities/Article';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getArticles } from '../../model/slice/articlesPageSlice';
 import {
   getArticlesError,

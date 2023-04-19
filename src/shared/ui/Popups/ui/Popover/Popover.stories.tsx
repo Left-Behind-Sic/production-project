@@ -1,12 +1,12 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import cls from 'features/notificationButton/ui/NotificationButton/NotificationButton.module.scss';
-import { NotificationList } from 'entities/Notification';
-import NotificationIcon from 'shared/assets/icons/notification-20-20.svg';
 import withMock from 'storybook-addon-mock';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Notification } from 'entities/Notification/model/types/notification';
+import cls from '@/features/notificationButton/ui/NotificationButton/NotificationButton.module.scss';
+import { NotificationList } from '@/entities/Notification';
+import NotificationIcon from '@/shared/assets/icons/notification-20-20.svg';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Notification } from '@/entities/Notification/model/types/notification';
 import { Button, ButtonTheme } from '../../../Button/Button';
 import { Icon } from '../../../Icon/Icon';
 import { Popover } from './Popover';
