@@ -14,6 +14,7 @@ import { ArticlesDetailsPageHeader } from '../ArticlesDetailsPageHeader/Articles
 import cls from './ArticleDetailsPage.module.scss';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
+import { ArticleRating } from '@/features/articleRating';
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -27,6 +28,10 @@ const ArticleDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
   const { t } = useTranslation('article-details');
   const { id } = useParams<{ id: string }>();
 
+  if (!id) {
+    return null;
+  }
+
   return (
     <DynamicModuleLoader
       reducers={reducers}
@@ -39,6 +44,7 @@ const ArticleDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
         >
           <ArticlesDetailsPageHeader />
           <ArticleDetails id={id} />
+          <ArticleRating articleId={id} />
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>
