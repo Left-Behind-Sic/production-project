@@ -72,7 +72,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error', // Проверяем зависимости эффекта
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
-    'eslint-super-plugin-path-checker/path-checker': 'error',
+    'eslint-super-plugin-path-checker/path-checker': ['error', { alias: '@' }],
   },
   globals: {
     __IS_DEV__: true,
