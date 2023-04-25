@@ -27,6 +27,7 @@ module.exports = {
     'react-hooks',
     'prettier',
     'eslint-super-plugin-path-checker',
+    'unused-imports',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -72,6 +73,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error', // Проверяем зависимости эффекта
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
+    'unused-imports/no-unused-imports': 'error',
     'eslint-super-plugin-path-checker/path-checker': ['error', { alias: '@' }],
     'eslint-super-plugin-path-checker/layer-imports': [
       'error',
