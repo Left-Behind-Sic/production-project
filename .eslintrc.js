@@ -73,6 +73,10 @@ module.exports = {
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
     'eslint-super-plugin-path-checker/path-checker': ['error', { alias: '@' }],
+    'eslint-super-plugin-path-checker/layer-imports': [
+      'error',
+      { alias: '@', ignoreImportPatterns: ['**/StoreProvider', '**/testing'] },
+    ],
     'eslint-super-plugin-path-checker/public-api-imports': [
       'error',
       { alias: '@', testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'] },

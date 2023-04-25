@@ -2,7 +2,8 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import withMock from 'storybook-addon-mock';
-import cls from './NotificationButton.module.scss';
+import cls from './Popover.module.scss';
+// eslint-disable-next-line eslint-super-plugin-path-checker/layer-imports
 import { NotificationList, Notification } from '@/entities/Notification';
 import NotificationIcon from '@/shared/assets/icons/notification-20-20.svg';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
