@@ -12,9 +12,6 @@ export type { ArticleDetailSchema } from './model/types/articleDetailSchema';
 
 export { ArticleList } from './ui/ArticleList/ArticleList';
 
-export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
-
-export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
 export {
   ArticleView,
   ArticleType,

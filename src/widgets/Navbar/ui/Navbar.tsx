@@ -11,7 +11,7 @@ import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import cls from './Navbar.module.scss';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleCreate } from '@/shared/const/router';
 
 interface NavbarProps {
   className?: string;
@@ -41,7 +41,7 @@ const Navbar = memo(({ className }: NavbarProps) => {
         <AppLink
           className={cls.createBtn}
           theme={AppLinkTheme.SECONDARY}
-          to={RoutePath.articles_create}
+          to={getRouteArticleCreate()}
         >
           {t('Создать статью')}
         </AppLink>
