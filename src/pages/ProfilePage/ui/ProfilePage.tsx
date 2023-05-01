@@ -16,7 +16,10 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     return null;
   }
   return (
-    <Page className={classNames('', {}, [className])}>
+    <Page
+      data-testid='ProfilePage'
+      className={classNames('', {}, [className])}
+    >
       <VStack
         max
         gap='16'
