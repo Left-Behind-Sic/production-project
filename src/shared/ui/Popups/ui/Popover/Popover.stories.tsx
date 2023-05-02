@@ -1,7 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import withMock from 'storybook-addon-mock';
 import cls from './Popover.module.scss';
 // eslint-disable-next-line eslint-super-plugin-path-checker/layer-imports
 import { NotificationList, Notification } from '@/entities/Notification';
@@ -18,7 +17,6 @@ export default {
     backgroundColor: { control: 'color' },
   },
   decorators: [
-    withMock,
     (Story) => (
       <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
         <Story />

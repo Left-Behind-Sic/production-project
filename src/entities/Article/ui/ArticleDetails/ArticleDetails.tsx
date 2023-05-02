@@ -15,8 +15,6 @@ import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
 import { Icon } from '@/shared/ui/Icon';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { ArticleBlockType } from '../../model/consts/consts';
-import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
-import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import {
   getArticleDetailsData,
   getArticleDetailsError,
@@ -27,6 +25,8 @@ import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import { ArticleBlock } from '../../model/types/article';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 interface ArticleDetailsProps {
   className?: string;
