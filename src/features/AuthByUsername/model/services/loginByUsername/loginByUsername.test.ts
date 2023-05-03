@@ -27,7 +27,7 @@ describe('loginByUsername.test', () => {
   //   expect(result.meta.requestStatus).toBe('fulfilled');
   //   expect(result.payload).toEqual(userValue);
   // });
-  // test('error login', async () => {
+  // test('error common', async () => {
   //   mockedAxios.post.mockReturnValue(Promise.resolve({ status: 403 }));
   //   const action = loginByUsername({ username: '123', password: '123' });
   //   const result = await action(dispatch, getState, undefined);
@@ -51,7 +51,7 @@ describe('loginByUsername.test', () => {
     expect(result.meta.requestStatus).toBe('fulfilled');
     expect(result.payload).toEqual(userValue);
   });
-  test('error login', async () => {
+  test('error common', async () => {
     const thunk = new TestAsyncThunk(loginByUsername);
     thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }));
     const result = await thunk.callThunk({ username: '123', password: '123' });
