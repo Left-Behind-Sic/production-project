@@ -30,22 +30,12 @@ export const ArticlesDetailsPageHeader = memo(({ className }: ArticlesDetailsPag
   }, [article?.id, navigate]);
 
   return (
-    <HStack
-      max
-      justify='between'
-      className={classNames('', {}, [className])}
-    >
-      <Button
-        theme={ButtonTheme.OUTLINE}
-        onClick={onBackToList}
-      >
+    <HStack max justify='between' className={classNames('', {}, [className])}>
+      <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
         {t('Назад к списку')}
       </Button>
       {canEdit && (
-        <Button
-          theme={ButtonTheme.OUTLINE}
-          onClick={onEditArticle}
-        >
+        <Button theme={ButtonTheme.OUTLINE} onClick={onEditArticle}>
           {t('Редактировать')}
         </Button>
       )}

@@ -28,10 +28,7 @@ export function TestProvider(props: TestProviderProps) {
   const { route = '/', initialState, asyncReducers, theme = Theme.LIGHT } = options;
   return (
     <MemoryRouter initialEntries={[route]}>
-      <StoreProvider
-        asyncReducers={asyncReducers}
-        initialState={initialState}
-      >
+      <StoreProvider asyncReducers={asyncReducers} initialState={initialState}>
         <I18nextProvider i18n={i18nForTests}>
           <ThemeProvider initialTheme={theme}>
             <div className={`app ${theme}`}>{children}</div>

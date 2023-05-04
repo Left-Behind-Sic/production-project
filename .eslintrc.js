@@ -83,6 +83,7 @@ module.exports = {
       'error',
       { alias: '@', testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'] },
     ],
+    'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
   },
   globals: {
     __IS_DEV__: true,

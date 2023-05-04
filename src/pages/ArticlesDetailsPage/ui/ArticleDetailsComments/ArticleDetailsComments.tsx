@@ -38,23 +38,12 @@ export const ArticleDetailsComments = memo(({ className, id }: ArticleDetailsCom
   });
 
   return (
-    <VStack
-      gap='8'
-      max
-      className={classNames('', {}, [className])}
-    >
-      <Text
-        size={TextSize.L}
-        className={cls.commentTitle}
-        title={t('Комментарии')}
-      />
+    <VStack gap='8' max className={classNames('', {}, [className])}>
+      <Text size={TextSize.L} className={cls.commentTitle} title={t('Комментарии')} />
       <Suspense fallback={<Loader />}>
         <AddCommentForm onSendComment={onSendComment} />
       </Suspense>
-      <CommentList
-        isLoading={commentsIsLoading}
-        comments={comments}
-      />
+      <CommentList isLoading={commentsIsLoading} comments={comments} />
     </VStack>
   );
 });

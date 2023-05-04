@@ -95,23 +95,12 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
           onChangeOrder={onChangeOrder}
           onChangeSort={onChangeSort}
         />
-        <ArticleViewSelector
-          view={view}
-          onViewClick={onChangeView}
-        />
+        <ArticleViewSelector view={view} onViewClick={onChangeView} />
       </div>
       <Card className={cls.search}>
-        <Input
-          placeholder={t('Поиск')}
-          value={search}
-          onChange={onChangeSearch}
-        />
+        <Input placeholder={t('Поиск')} value={search} onChange={onChangeSearch} />
       </Card>
-      <ArticleTypeTabs
-        className={cls.tabs}
-        onChangeType={onChangeType}
-        value={type}
-      />
+      <ArticleTypeTabs className={cls.tabs} onChangeType={onChangeType} value={type} />
     </div>
   );
 });

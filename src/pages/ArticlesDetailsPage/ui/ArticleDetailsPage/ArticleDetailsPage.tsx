@@ -33,15 +33,9 @@ const ArticleDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
   }
 
   return (
-    <DynamicModuleLoader
-      reducers={reducers}
-      removeAfterUnmount
-    >
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        <VStack
-          gap='16'
-          max
-        >
+        <VStack gap='16' max>
           <ArticlesDetailsPageHeader />
           <ArticleDetails id={id} />
           <ArticleRating articleId={id} />

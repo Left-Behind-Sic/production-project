@@ -17,12 +17,9 @@ interface ArticleListProps {
 }
 
 const getSkeletons = (view: ArticleView) => {
-  return new Array(view === ArticleView.SMALL ? 9 : 3).fill(0).map((_, index) => (
-    <ArticleListItemSkeleton
-      key={index}
-      view={view}
-    />
-  ));
+  return new Array(view === ArticleView.SMALL ? 9 : 3)
+    .fill(0)
+    .map((_, index) => <ArticleListItemSkeleton key={index} view={view} />);
 };
 
 export const ArticleList = memo(
@@ -44,10 +41,7 @@ export const ArticleList = memo(
     if (!isLoading && !articles.length) {
       return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-          <Text
-            size={TextSize.L}
-            title={t('Статьи не найдены')}
-          />
+          <Text size={TextSize.L} title={t('Статьи не найдены')} />
         </div>
       );
     }

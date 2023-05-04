@@ -39,11 +39,7 @@ export const EditableProfileCardHeader = memo(({ className }: EditableProfileCar
   }, [dispatch]);
 
   return (
-    <HStack
-      max
-      justify='between'
-      className={classNames('', {}, [className])}
-    >
+    <HStack max justify='between' className={classNames('', {}, [className])}>
       <Text title={t('Профиль')} />
       {canEdit && (
         <div>

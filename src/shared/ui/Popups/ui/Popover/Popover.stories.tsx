@@ -53,10 +53,7 @@ Normal.args = {
   children: <NotificationList className={cls.notifications} />,
   trigger: (
     <Button theme={ButtonTheme.CLEAR}>
-      <Icon
-        Svg={NotificationIcon}
-        inverted
-      />
+      <Icon Svg={NotificationIcon} inverted />
     </Button>
   ),
 };

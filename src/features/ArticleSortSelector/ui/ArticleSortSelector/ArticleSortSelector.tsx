@@ -55,12 +55,7 @@ export const ArticleSortSelector = memo(
           value={sort}
           onChange={onChangeSort}
         />
-        <Select
-          options={orderOptions}
-          label={t('по')}
-          value={order}
-          onChange={onChangeOrder}
-        />
+        <Select options={orderOptions} label={t('по')} value={order} onChange={onChangeOrder} />
       </div>
     );
   },

@@ -26,10 +26,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
       gap='8'
       className={classNames('', {}, [className])}
     >
-      <Text
-        size={TextSize.L}
-        title={t('Рекомендуем')}
-      />
+      <Text size={TextSize.L} title={t('Рекомендуем')} />
       <ArticleList
         articles={articles ?? []}
         // isLoading={recommendationsIsLoading}

@@ -28,11 +28,7 @@ const ArticleViewSelector = memo(({ className, onViewClick, view }: ArticleViewS
   return (
     <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
       {viewTypes.map((viewType, index) => (
-        <Button
-          key={index}
-          theme={ButtonTheme.CLEAR}
-          onClick={() => onViewClick?.(viewType.view)}
-        >
+        <Button key={index} theme={ButtonTheme.CLEAR} onClick={() => onViewClick?.(viewType.view)}>
           <Icon
             Svg={viewType.icon}
             className={classNames('', { [cls.notSelected]: viewType.view !== view })}
