@@ -6,7 +6,7 @@ import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { LoginModal } from '@/features/AuthByUsername';
 import { getUserAuthData } from '@/entities/User';
 import { Text, TextTheme } from '@/shared/ui/Text';
-import { AppLinkTheme, AppLink } from '@/shared/ui/AppLink';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
@@ -17,27 +17,27 @@ interface NavbarProps {
   className?: string;
 }
 
-const Navbar = memo(({ className }: NavbarProps) => {
+export const Navbar = memo(({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useSelector(getUserAuthData);
-
-  const onShowModal = useCallback(() => {
-    setIsAuthModal(true);
-  }, []);
 
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false);
   }, []);
 
+  const onShowModal = useCallback(() => {
+    setIsAuthModal(true);
+  }, []);
+
   if (authData) {
     return (
       <header className={classNames(cls.Navbar, {}, [className])}>
-        <Text theme={TextTheme.INVERTED} className={cls.appName} title={t('Ulbi tv App')} />
+        <Text className={cls.appName} title={t('Ulbi tv App')} theme={TextTheme.INVERTED} />
         <AppLink
-          className={cls.createBtn}
-          theme={AppLinkTheme.SECONDARY}
           to={getRouteArticleCreate()}
+          theme={AppLinkTheme.SECONDARY}
+          className={cls.createBtn}
         >
           {t('Создать статью')}
         </AppLink>
@@ -45,13 +45,6 @@ const Navbar = memo(({ className }: NavbarProps) => {
           <NotificationButton />
           <AvatarDropdown />
         </HStack>
-        {/* <Button */}
-        {/*  theme={ButtonTheme.CLEAR_INVERTED} */}
-        {/*  className={cls.links} */}
-        {/*  onClick={onLogout} */}
-        {/* > */}
-        {/*  {t('Выйти')} */}
-        {/* </Button> */}
       </header>
     );
   }
@@ -65,5 +58,3 @@ const Navbar = memo(({ className }: NavbarProps) => {
     </header>
   );
 });
-
-export default Navbar;

@@ -11,20 +11,19 @@ interface AvatarDropdownProps {
   className?: string;
 }
 
-export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
+export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
+  const { className } = props;
   const { t } = useTranslation();
-
   const dispatch = useDispatch();
-  const authData = useSelector(getUserAuthData);
-
   const isAdmin = useSelector(isUserAdmin);
   const isManager = useSelector(isUserManager);
-
-  const isAdminPanelAvailable = isAdmin || isManager;
+  const authData = useSelector(getUserAuthData);
 
   const onLogout = useCallback(() => {
     dispatch(userActions.logout());
   }, [dispatch]);
+
+  const isAdminPanelAvailable = isAdmin || isManager;
 
   if (!authData) {
     return null;
@@ -32,8 +31,8 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
 
   return (
     <Dropdown
-      className={classNames('', {}, [className])}
       direction='bottom left'
+      className={classNames('', {}, [className])}
       items={[
         ...(isAdminPanelAvailable
           ? [
