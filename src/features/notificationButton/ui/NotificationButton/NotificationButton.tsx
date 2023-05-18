@@ -1,13 +1,12 @@
 import React, { memo, useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
-import { Icon } from '@/shared/ui/deprecated/Icon';
 import { NotificationList } from '@/entities/Notification';
-import { Popover } from '@/shared/ui/deprecated/Popups';
-import NotificationIcon from '@/shared/assets/icons/notification-20-20.svg';
+import NotificationIcon from '@/shared/assets/icons/notification.svg';
 import { Drawer } from '@/shared/ui/deprecated/Drawer';
 import cls from './NotificationButton.module.scss';
+import { Icon } from '@/shared/ui/redesigned/Icon';
+import { Popover } from '@/shared/ui/redesigned/Popups';
 
 interface NotificationButtonProps {
   className?: string;
@@ -24,11 +23,7 @@ export const NotificationButton = memo(({ className }: NotificationButtonProps) 
     setIsOpen(false);
   }, []);
 
-  const trigger = (
-    <Button onClick={onOpenDrawer} theme={ButtonTheme.CLEAR}>
-      <Icon Svg={NotificationIcon} inverted />
-    </Button>
-  );
+  const trigger = <Icon Svg={NotificationIcon} clickable onClick={onOpenDrawer} />;
 
   return (
     <div>
