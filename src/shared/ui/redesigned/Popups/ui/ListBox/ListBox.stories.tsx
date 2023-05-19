@@ -21,7 +21,7 @@ export default {
 
 const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
 
-const items: ListBoxItem[] = [
+const items: ListBoxItem<string>[] = [
   {
     value: 'element 1',
     content: 'content here 1',
