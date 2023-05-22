@@ -31,6 +31,17 @@
   height: calc(100vh + 100px);
   padding: 15px;
 
-  background: var(--bg-color);
   border-radius: 12px 12px 0;
+}
+
+.drawerNew {
+  .sheet{
+    background: var(--light-bg-redesigned);
+  }
+}
+
+.drawerOld {
+  .sheet{
+    background: var(--bg-color);
+  }
 }

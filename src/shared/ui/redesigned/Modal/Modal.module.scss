@@ -12,8 +12,6 @@
   align-items: center;
   justify-content: center;
 
-  color: var(--primary-color);
-
   opacity: 0;
 }
 
@@ -28,6 +26,18 @@
   border-radius: 12px;
 
   transition: 0.2s transform;
+}
+
+.modalNew {
+  .content{
+    background: var(--light-bg-redesigned);
+  }
+}
+
+.modalOld {
+  .content{
+    background: var(--bg-color);
+  }
 }
 
 .opened {
