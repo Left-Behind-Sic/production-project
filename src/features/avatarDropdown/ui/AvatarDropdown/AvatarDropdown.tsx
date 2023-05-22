@@ -5,7 +5,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/User';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 import { Dropdown } from '@/shared/ui/redesigned/Popups';
+import { Dropdown as DropdownDeprecated } from '@/shared/ui/deprecated/Popups';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
+import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 interface AvatarDropdownProps {
   className?: string;
@@ -49,11 +52,24 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
   ];
 
   return (
-    <Dropdown
-      direction='bottom left'
-      className={classNames('', {}, [className])}
-      items={items}
-      trigger={<Avatar size={40} src={authData.avatar} />}
+    <ToggleFeatures
+      feature='isAppRedesigned'
+      on={
+        <Dropdown
+          direction='bottom left'
+          className={classNames('', {}, [className])}
+          items={items}
+          trigger={<Avatar size={40} src={authData.avatar} />}
+        />
+      }
+      off={
+        <DropdownDeprecated
+          direction='bottom left'
+          className={classNames('', {}, [className])}
+          items={items}
+          trigger={<AvatarDeprecated fallbackInverted size={30} src={authData.avatar} />}
+        />
+      }
     />
   );
 });
