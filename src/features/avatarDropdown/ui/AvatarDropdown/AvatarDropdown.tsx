@@ -3,7 +3,7 @@ import React, { memo, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/User';
-import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
+import { getRouteAdminPanel, getRouteProfile, getRouteSettings } from '@/shared/const/router';
 import { Dropdown } from '@/shared/ui/redesigned/Popups';
 import { Dropdown as DropdownDeprecated } from '@/shared/ui/deprecated/Popups';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
@@ -41,6 +41,10 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
           },
         ]
       : []),
+    {
+      content: t('Настройки'),
+      href: getRouteSettings(),
+    },
     {
       content: t('Профиль'),
       href: getRouteProfile(authData.id),

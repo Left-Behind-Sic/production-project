@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.active {
+button.active, .active {
   background: var(--inverted-primary-color);
 }
 
