@@ -49,8 +49,9 @@ const ArticleViewSelector = memo(({ className, onViewClick, view }: ArticleViewS
           className={classNames(cls.ArticleViewSelectorRedesigned, {}, [className])}
         >
           <HStack gap='8'>
-            {viewTypes.map((viewType, index) => (
+            {viewTypes.map((viewType) => (
               <Icon
+                key={viewType.view}
                 clickable
                 onClick={() => onViewClick?.(viewType.view)}
                 Svg={viewType.icon}
@@ -62,9 +63,9 @@ const ArticleViewSelector = memo(({ className, onViewClick, view }: ArticleViewS
       }
       off={
         <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
-          {viewTypes.map((viewType, index) => (
+          {viewTypes.map((viewType) => (
             <ButtonDeprecated
-              key={index}
+              key={viewType.view}
               theme={ButtonTheme.CLEAR}
               onClick={() => onViewClick?.(viewType.view)}
             >

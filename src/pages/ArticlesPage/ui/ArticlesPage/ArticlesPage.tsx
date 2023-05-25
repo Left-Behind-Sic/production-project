@@ -14,7 +14,6 @@ import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
-import { useArticleItemById } from '../../model/selectors/articlesPageSelectors';
 import { ArticlePageGreeting } from '@/features/articlePageGreeting';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
@@ -32,8 +31,6 @@ const reducers: ReducersList = {
 const ArticlesPage = ({ className }: ArticlesPageProps) => {
   const dispatch = useAppDispatch();
   const [searchParams] = useSearchParams();
-  const articleItem = useArticleItemById('3');
-  console.log(articleItem);
 
   const onLoadNextPart = useCallback(() => {
     dispatch(fetchNextArticlesPage());
