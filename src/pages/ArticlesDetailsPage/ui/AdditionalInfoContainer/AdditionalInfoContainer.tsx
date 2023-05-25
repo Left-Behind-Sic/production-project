@@ -21,7 +21,7 @@ export const AdditionalInfoContainer = () => {
     return null;
   }
   return (
-    <Card padding='24' border='roundBorder' className={cls.card}>
+    <Card padding='24' border='partialBorder' className={cls.card}>
       <ArticleAdditionalInfo
         onEdit={onEditArticle}
         author={article.user}

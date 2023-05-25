@@ -37,6 +37,18 @@
   background: none;
   border: none;
   outline: none;
+
+  &.normal {
+    color: var(--text-redesigned);
+  }
+
+  &.error {
+    color: var(--cancel-redesigned);
+  }
+
+  &.success {
+    color: var(--save-redesigned);
+  }
 }
 
 .filled{
@@ -44,6 +56,18 @@
   border: none;
   border-radius: 34px;
   outline: none;
+
+  &.normal {
+    background: var(--light-bg-redesigned);
+  }
+
+  &.error {
+    background: var(--cancel-redesigned);
+  }
+
+  &.success {
+    background: var(--save-redesigned);
+  }
 }
 
 .outline {
@@ -54,7 +78,20 @@
   &:hover {
     border: 2px solid var(--accent-redesigned);
   }
+
+  &.normal {
+    border: 2px solid var(--icon-redesigned);
+  }
+
+  &.error {
+    border: 2px solid var(--cancel-redesigned);
+  }
+
+  &.success {
+    border: 2px solid var(--save-redesigned);
+  }
 }
+
 
 .background {
   color: var(--primary-color);
