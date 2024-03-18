@@ -1,4 +1,5 @@
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
+export { fetchArticleById } from './model/services/fetchArticleById/fetchArticleById';
 
 export {
   getArticleDetailsData,

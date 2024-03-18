@@ -3,6 +3,7 @@ import { memo } from 'react';
 import { useParams } from 'react-router-dom';
 import { Page } from '@/widgets/Page';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { ArticleDetails } from '@/entities/Article';
 
 interface ArticleEditPageProps {
   className?: string;
@@ -16,6 +17,7 @@ const ArticleEditPage = ({ className }: ArticleEditPageProps) => {
   return (
     <Page className={classNames('', {}, [className])}>
       {isEdit ? t('Редактирование статьи Id=') + id : t(`Новая статья`)}
+      <ArticleDetails id={id} />
     </Page>
   );
 };
