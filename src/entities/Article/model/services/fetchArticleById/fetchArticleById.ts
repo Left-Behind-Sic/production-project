@@ -2,6 +2,12 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { Article } from '../../types/article';
 
+const fetchUrl = (url: string, options: RequestInit, attempts = 5) =>
+  Promise.resolve()
+    .then(() => fetch(url, options))
+    // eslint-disable-next-line no-plusplus
+    .catch((ex) => (attempts-- ? fetchUrl(url, options, attempts) : Promise.reject(ex)));
+
 export const fetchArticleById = createAsyncThunk<Article, string | undefined, ThunkConfig<string>>(
   'article/fetchArticleById',
   async (articleId, thunkApi) => {
